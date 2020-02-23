@@ -19,11 +19,11 @@ fun main(args: Array<String>) {
 
             if (mutation.type == "childList") {
 
-                blockClick("span._33x6N") {
+                blockClick("grammarly-card > div > div > div > div > div > div > div > div > span > div > span > span > span") {
                     onClickBlocked()
                 }
 
-                blockClick("div._1QK5F") {
+                blockClick("grammarly-card > div > div > div > div > div > div > div > div") {
                     onClickBlocked()
                 }
             }
@@ -39,6 +39,7 @@ fun onClickBlocked() {
 }
 
 fun blockClick(selector: String, callback: () -> Unit) {
+
     val element = document.querySelector(selector)
 
     if (element != null) {
